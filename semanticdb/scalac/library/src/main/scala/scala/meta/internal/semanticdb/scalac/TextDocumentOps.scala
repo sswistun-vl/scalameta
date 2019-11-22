@@ -3,13 +3,11 @@ package scala.meta.internal.semanticdb.scalac
 import org.scalameta.internal.ScalaCompat._
 import scala.collection.mutable
 import scala.meta.internal.inputs._
-import scala.meta.internal.io.PathIO
 import scala.meta.internal.scalacp._
 import scala.meta.internal.{semanticdb => s}
 import scala.reflect.internal._
 import scala.reflect.internal.util._
 import scala.reflect.internal.{Flags => gf}
-import scala.reflect.io.{PlainFile => GPlainFile}
 import scala.{meta => m}
 import scala.meta.internal.semanticdb.Scala._
 
@@ -370,6 +368,34 @@ trait TextDocumentOps { self: SemanticdbOps =>
                   // Skip the field definition in favor of the associated getter.
                   // This will make sure that val/var class parameters are consistently
                   // resolved to getter symbols both as definition and references.
+
+                  def flattenRec(tree: g.Tree): List[g.Tree] = tree match {
+                    case b: g.Block =>
+                      b.children.flatMap(flattenRec)
+                    case tree: g.Tree =>
+                      tree :: tree.children.flatMap(flattenRec)
+                  }
+
+                  if (gtree.rhs.isInstanceOf[g.Block]) {
+                    flattenRec(gtree.rhs)
+                      .collect {
+                        case v: g.ValDef if v.rhs.symbol != null =>
+                          v
+                      }
+                      .filter(v => !v.rhs.symbol.isSynthetic || !v.rhs.symbol.isMethod)
+                      .map(v => {
+                        if (v.symbol.isLocalToBlock)
+                          occurrences
+                            .find(t => t._2 == v.rhs.symbol.toSemantic)
+                            .map(t => (v.rhs.pos.toMeta, t._2))
+                            .getOrElse((v.rhs.pos.toMeta, v.rhs.symbol.toSemantic))
+                        else
+                          (v.rhs.pos.toMeta, v.rhs.symbol.toSemantic)
+                      })
+                      .foreach(v => {
+                        occurrences(v._1) = v._2
+                      })
+                  }
                 } else {
                   tryMstart(gstart)
                   tryMstart(gpoint)

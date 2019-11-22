@@ -1743,6 +1743,26 @@ example/ImplicitConversion#tuple. => val method tuple: Tuple2[Int, Int]
 example/ImplicitConversion#x. => val method x: Int
   Int => scala/Int#
 
+example/Infix.class
+-------------------
+
+Summary:
+Schema => SemanticDB v4
+Uri => example/Infix.class
+Text => empty
+Language => Scala
+Symbols => 4 entries
+
+Symbols:
+example/Infix# => class Infix extends AnyRef { +3 decls }
+  AnyRef => scala/AnyRef#
+example/Infix#`<init>`(). => primary ctor <init>()
+example/Infix#b. => val method b: String
+  String => java/lang/String#
+example/Infix#infix. => val method infix: List[String]
+  List => scala/collection/immutable/List#
+  String => java/lang/String#
+
 example/InstrumentTyper.class
 -----------------------------
 
