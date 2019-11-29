@@ -233,12 +233,18 @@ trait TextDocumentOps { self: SemanticdbOps =>
             if (gsym0 == null) return
             if (gsym0.isUselessOccurrence) return
             if (mtree.pos == m.Position.None) return
-            if (occurrences.contains(mtree.pos)) return
+            val parent = gsym0.parentSymbols.find(_.nameString == mtree.value)
+            if (occurrences.contains(mtree.pos) && (parent.isEmpty || !gsym0.isClass)) return
+
 
             val gsym = {
               def isClassRefInCtorCall = gsym0.isConstructor && mtree.isNot[m.Name.Anonymous]
-              if (gsym0 != null && isClassRefInCtorCall) gsym0.owner
-              else gsym0
+              parent match {
+                case Some(psym) => psym
+                case _ =>
+                  if (gsym0 != null && isClassRefInCtorCall) gsym0.owner
+                  else gsym0
+              }
             }
             val symbol = gsym.toSemantic
             if (symbol == Symbols.None) return
@@ -610,6 +616,10 @@ trait TextDocumentOps { self: SemanticdbOps =>
 
               chars.length >= (classOfChars.length + pos.start) &&
               (0 until classOfChars.length).forall(i => chars(i + pos.start) == classOfChars(i))
+            }
+
+            if (gtree.symbol != null && gtree.symbol.toSemantic.trim == "_empty_/Foo.C#") {
+              val g = gtree
             }
 
             gtree match {

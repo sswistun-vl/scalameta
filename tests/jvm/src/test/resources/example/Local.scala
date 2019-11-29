@@ -2,7 +2,7 @@ package example
 
 class Local/*<=example.Local#*/ {
   def a/*<=example.Local#a().*/() = {
-    def id/*<=local0*/[A/*<=local2*/](a/*<=local1*/: A/*=>local2*/): A/*=>local2*/ = a/*=>local1*/
-    id/*=>local0*/(1)
+    def id/*<=local1*/[A/*<=local3*/](a/*<=local2*/: A/*=>local3*/): A/*=>local3*/ = a/*=>local2*/
+    id/*=>local1*/(1)
   }
 }

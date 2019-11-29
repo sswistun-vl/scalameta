@@ -2,44 +2,44 @@ package example
 
 class ForComprehension/*<=example.ForComprehension#*/ {
   for {
-    a/*<=local0*/ <- List/*=>scala.collection.immutable.List.*/(1)
-    b/*<=local1*/ <- List/*=>scala.collection.immutable.List.*/(1)
-    if b/*=>local1*/ >/*=>scala.Int#`>`(+3).*/ 1
-    c/*<=local3*/ = a/*=>local0*/ +/*=>scala.Int#`+`(+4).*/ b/*=>local1*/
-  } yield (a/*=>local0*/, b/*=>local1*/, c/*=>local3*/)
+    a/*<=local1*/ <- List/*=>scala.collection.immutable.List.*/(1)
+    b/*<=local2*/ <- List/*=>scala.collection.immutable.List.*/(1)
+    if b/*=>local2*/ >/*=>scala.Int#`>`(+3).*/ 1
+    c/*<=local7*/ = a/*=>local1*/ +/*=>scala.Int#`+`(+4).*/ b/*=>local2*/
+  } yield (a/*=>local1*/, b/*=>local2*/, c/*=>local7*/)
   for {
-    a/*<=local4*/ <- List/*=>scala.collection.immutable.List.*/(1)
-    b/*<=local5*/ <- List/*=>scala.collection.immutable.List.*/(a/*=>local4*/)
+    a/*<=local8*/ <- List/*=>scala.collection.immutable.List.*/(1)
+    b/*<=local9*/ <- List/*=>scala.collection.immutable.List.*/(a/*=>local8*/)
     if (
-      a/*=>local4*/,
-      b/*=>local5*/
+      a/*=>local8*/,
+      b/*=>local9*/
     ) ==/*=>java.lang.Object#`==`().*/ (1, 2)
     (
-      c/*<=local11*/,
-      d/*<=local12*/
-    ) <- List/*=>scala.collection.immutable.List.*/((a/*=>local4*/, b/*=>local5*/))
+      c/*<=local19*/,
+      d/*<=local20*/
+    ) <- List/*=>scala.collection.immutable.List.*/((a/*=>local8*/, b/*=>local9*/))
     if (
-      a/*=>local4*/,
-      b/*=>local5*/,
-      c/*=>local11*/,
-      d/*=>local12*/
+      a/*=>local8*/,
+      b/*=>local9*/,
+      c/*=>local19*/,
+      d/*=>local20*/
     ) ==/*=>java.lang.Object#`==`().*/ (1, 2, 3, 4)
-    e/*<=local14*/ = (
-      a/*=>local4*/,
-      b/*=>local5*/,
-      c/*=>local11*/,
-      d/*=>local12*/
+    e/*<=local23*/ = (
+      a/*=>local8*/,
+      b/*=>local9*/,
+      c/*=>local19*/,
+      d/*=>local20*/
     )
-    if e/*=>local14*/ ==/*=>java.lang.Object#`==`().*/ (1, 2, 3, 4)
-    f/*<=local15*/ <- List/*=>scala.collection.immutable.List.*/(e/*=>local14*/)
+    if e/*=>local23*/ ==/*=>java.lang.Object#`==`().*/ (1, 2, 3, 4)
+    f/*<=local24*/ <- List/*=>scala.collection.immutable.List.*/(e/*=>local23*/)
   } yield {
     (
-      a/*=>local4*/,
-      b/*=>local5*/,
-      c/*=>local11*/,
-      d/*=>local12*/,
-      e/*=>local14*/,
-      f/*=>local15*/
+      a/*=>local8*/,
+      b/*=>local9*/,
+      c/*=>local19*/,
+      d/*=>local20*/,
+      e/*=>local23*/,
+      f/*=>local24*/
     )
   }
 }

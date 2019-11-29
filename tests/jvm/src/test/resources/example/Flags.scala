@@ -21,6 +21,6 @@ package object p/*<=flags.p.package.*/ {
   class AA/*<=flags.p.package.AA#*/(x/*<=flags.p.package.AA#x.*/: Int/*=>scala.Int#*/, val y/*<=flags.p.package.AA#y.*/: Int/*=>scala.Int#*/, var z/*<=flags.p.package.AA#z().*/: Int/*=>scala.Int#*/)
   class S/*<=flags.p.package.S#*/[@specialized/*=>scala.specialized#*/ T/*<=flags.p.package.S#[T]*/]
   val List/*=>scala.collection.immutable.List.*/(xs1/*<=flags.p.package.xs1.*/) = ???/*=>scala.Predef.`???`().*/
-  ???/*=>scala.Predef.`???`().*/ match { case List/*=>scala.collection.immutable.List.*/(xs2/*<=local1*/) => ???/*=>scala.Predef.`???`().*/ }
-  ???/*=>scala.Predef.`???`().*/ match { case _: List/*=>scala.package.List#*/[t/*<=local2*/] => ???/*=>scala.Predef.`???`().*/ }
+  ???/*=>scala.Predef.`???`().*/ match { case List/*=>scala.collection.immutable.List.*/(xs2/*<=local11*/) => ???/*=>scala.Predef.`???`().*/ }
+  ???/*=>scala.Predef.`???`().*/ match { case _: List/*=>scala.package.List#*/[t/*<=local12*/] => ???/*=>scala.Predef.`???`().*/ }
 }

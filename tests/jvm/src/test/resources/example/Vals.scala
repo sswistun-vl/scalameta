@@ -17,20 +17,20 @@ abstract class Vals/*<=example.Vals#*/(p/*<=example.Vals#p.*/: Int/*=>scala.Int#
   final var yfm/*<=example.Vals#yfm().*/: Int/*=>scala.Int#*/ = ???/*=>scala.Predef.`???`().*/
   implicit var yim/*<=example.Vals#yim().*/: Int/*=>scala.Int#*/ = ???/*=>scala.Predef.`???`().*/
   def m/*<=example.Vals#m().*/ = {
-    val xl/*<=local0*/: Int/*=>scala.Int#*/ = ???/*=>scala.Predef.`???`().*/
-    lazy val xzl/*<=local1*/: Int/*=>scala.Int#*/ = ???/*=>scala.Predef.`???`().*/
+    val xl/*<=local1*/: Int/*=>scala.Int#*/ = ???/*=>scala.Predef.`???`().*/
+    lazy val xzl/*<=local2*/: Int/*=>scala.Int#*/ = ???/*=>scala.Predef.`???`().*/
     // NOTE: local values cannot be final
     // final val xfl: Int = ???
-    implicit val xil/*<=local2*/: Int/*=>scala.Int#*/ = ???/*=>scala.Predef.`???`().*/
-    var yl/*<=local3*/: Int/*=>scala.Int#*/ = ???/*=>scala.Predef.`???`().*/
+    implicit val xil/*<=local3*/: Int/*=>scala.Int#*/ = ???/*=>scala.Predef.`???`().*/
+    var yl/*<=local4*/: Int/*=>scala.Int#*/ = ???/*=>scala.Predef.`???`().*/
     // NOTE: lazy not allowed here. Only vals can be lazy
     // lazy var yzl: Int = ???
     // NOTE: local variables cannot be final
     // final var yfl: Int = ???
-    implicit var yil/*<=local4*/: Int/*=>scala.Int#*/ = ???/*=>scala.Predef.`???`().*/
-    yl/*=>local3*/ = xl/*=>local0*/ +/*=>scala.Int#`+`(+4).*/ yl/*=>local3*/
-    println/*=>scala.Predef.println(+1).*/(xzl/*=>local1*/)
-    yil/*=>local4*/ = xil/*=>local2*/ +/*=>scala.Int#`+`(+4).*/ yil/*=>local4*/
+    implicit var yil/*<=local5*/: Int/*=>scala.Int#*/ = ???/*=>scala.Predef.`???`().*/
+    yl/*=>local4*/ = xl/*=>local1*/ +/*=>scala.Int#`+`(+4).*/ yl/*=>local4*/
+    println/*=>scala.Predef.println(+1).*/(xzl/*=>local2*/)
+    yil/*=>local5*/ = xil/*=>local3*/ +/*=>scala.Int#`+`(+4).*/ yil/*=>local5*/
   }
   println/*=>scala.Predef.println(+1).*/(xzlm/*=>example.Vals#xzlm.*/)
   ylm/*=>example.Vals#ylm().*/ = xlm/*=>example.Vals#xlm.*/ +/*=>scala.Int#`+`(+4).*/ ylm/*=>example.Vals#ylm().*/

@@ -5,15 +5,15 @@ import scala.annotation.meta._
 import scala.language/*=>scala.language.*/.experimental/*=>scala.language.experimental.*/.macros/*=>scala.language.experimental.macros.*/
 
 @ClassAnnotation/*=>com.javacp.annot.ClassAnnotation#*/
-class Annotations/*<=annot.Annotations#*/[@TypeParameterAnnotation/*=>com.javacp.annot.TypeParameterAnnotation#*/ T/*<=annot.Annotations#[T]*/](@ParameterAnnotation/*=>com.javacp.annot.ParameterAnnotation#*/ x/*<=annot.Annotations#x.*/: T/*=>annot.Annotations#[T]*/) { self/*<=local0*/: AnyRef =>
+class Annotations/*<=annot.Annotations#*/[@TypeParameterAnnotation/*=>com.javacp.annot.TypeParameterAnnotation#*/ T/*<=annot.Annotations#[T]*/](@ParameterAnnotation/*=>com.javacp.annot.ParameterAnnotation#*/ x/*<=annot.Annotations#x.*/: T/*=>annot.Annotations#[T]*/) { self/*<=local4*/: AnyRef =>
   @FieldAnnotation/*=>com.javacp.annot.FieldAnnotation#*/
   val field/*<=annot.Annotations#field.*/ = 42
 
   @MethodAnnotation/*=>com.javacp.annot.MethodAnnotation#*/
   def method/*<=annot.Annotations#method().*/ = {
     @LocalAnnotation/*=>com.javacp.annot.LocalAnnotation#*/
-    val local/*<=local1*/ = 42
-    local/*=>local1*/
+    val local/*<=local5*/ = 42
+    local/*=>local5*/
   }
   @TypeAnnotation/*=>com.javacp.annot.TypeAnnotation#*/
   type T/*<=annot.Annotations#T#*/

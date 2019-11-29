@@ -22,21 +22,21 @@ class ValPattern/*<=example.ValPattern#*/ {
       )
     )
     locally/*=>scala.Predef.locally().*/ {
-      val (left/*<=local7*/, right/*<=local8*/) = (1, 2)
-      val Some/*=>scala.Some.*/(number1/*<=local9*/) =
+      val (left/*<=local8*/, right/*<=local9*/) = (1, 2)
+      val Some/*=>scala.Some.*/(number1/*<=local10*/) =
         Some/*=>scala.Some.*/(1)
 
-      var (leftVar/*<=local12*/, rightVar/*<=local13*/) = (1, 2)
-      var Some/*=>scala.Some.*/(number1Var/*<=local14*/) =
+      var (leftVar/*<=local13*/, rightVar/*<=local14*/) = (1, 2)
+      var Some/*=>scala.Some.*/(number1Var/*<=local15*/) =
         Some/*=>scala.Some.*/(1)
       println/*=>scala.Predef.println(+1).*/(
         (
-          number1/*=>local9*/,
-          left/*=>local7*/,
-          right/*=>local8*/,
-          number1Var/*=>local14*/,
-          leftVar/*=>local12*/,
-          rightVar/*=>local13*/
+          number1/*=>local10*/,
+          left/*=>local8*/,
+          right/*=>local9*/,
+          number1Var/*=>local15*/,
+          leftVar/*=>local13*/,
+          rightVar/*=>local14*/
         )
       )
     }

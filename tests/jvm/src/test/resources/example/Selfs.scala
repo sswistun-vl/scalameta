@@ -2,13 +2,13 @@ package selfs
 
 class B/*<=selfs.B#*/
 
-class C1/*<=selfs.C1#*/ extends B/*=>selfs.B#*/ { self/*<=local0*/ =>
+class C1/*<=selfs.C1#*/ extends B/*=>selfs.B#*/ { self/*<=local2*/ =>
 }
 
-class C2/*<=selfs.C2#*/ extends B/*=>selfs.B#*/ { self/*<=local1*/: B/*=>selfs.B#*/ =>
+class C2/*<=selfs.C2#*/ extends B/*=>selfs.B#*/ { self/*<=local4*/: B/*=>selfs.B#*/ =>
 }
 
-class C3/*<=selfs.C3#*/ extends B/*=>selfs.B#*/ { self/*<=local2*/: B/*=>selfs.B#*/ with Int/*=>scala.Int#*/ =>
+class C3/*<=selfs.C3#*/ extends B/*=>selfs.B#*/ { self/*<=local7*/: B/*=>selfs.B#*/ with Int/*=>scala.Int#*/ =>
 }
 
 class C4/*<=selfs.C4#*/ extends B/*=>selfs.B#*/ { _ =>

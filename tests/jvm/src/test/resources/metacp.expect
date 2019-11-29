@@ -2873,6 +2873,31 @@ locals/Test.xs. => val method xs: List[Int]
   List => scala/collection/immutable/List#
   Int => scala/Int#
 
+objects/Foo.class
+-----------------
+
+Summary:
+Schema => SemanticDB v4
+Uri => objects/Foo.class
+Text => empty
+Language => Scala
+Symbols => 6 entries
+
+Symbols:
+objects/Foo. => final object Foo extends AnyRef { +1 decls }
+  AnyRef => scala/AnyRef#
+objects/Foo.C# => class C[A] extends AnyRef { +2 decls }
+  A => objects/Foo.C#[A]
+  AnyRef => scala/AnyRef#
+objects/Foo.C#[A] => typeparam A
+objects/Foo.C#`<init>`(). => primary ctor <init>(x: Int)
+  x => objects/Foo.C#`<init>`().(x)
+  Int => scala/Int#
+objects/Foo.C#`<init>`().(x) => param x: Int
+  Int => scala/Int#
+objects/Foo.C#x. => private[this] val method x: Int
+  Int => scala/Int#
+
 objects/X.class
 ---------------
 
@@ -2888,6 +2913,22 @@ objects/X. => final object X extends AnyRef { +1 decls }
   AnyRef => scala/AnyRef#
 objects/X.Y. => final object Y extends AnyRef
   AnyRef => scala/AnyRef#
+
+objects/Y.class
+---------------
+
+Summary:
+Schema => SemanticDB v4
+Uri => objects/Y.class
+Text => empty
+Language => Scala
+Symbols => 2 entries
+
+Symbols:
+objects/Y# => class Y extends C[Nothing] { +1 decls }
+  C => objects/Foo.C#
+  Nothing => scala/Nothing#
+objects/Y#`<init>`(). => primary ctor <init>()
 
 prefixes/C.class
 ----------------
